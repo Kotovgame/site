@@ -1,0 +1,147 @@
+/* First include all your existing CSS */
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+
+/* Add animations section */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Apply animations to elements */
+.header__title {
+    animation: fadeIn 1s ease-out;
+}
+
+.header__text {
+    animation: fadeIn 1s ease-out 0.3s backwards;
+}
+
+.project {
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project__img {
+    transition: transform 0.3s ease;
+}
+
+.project:hover .project__img {
+    transform: scale(1.02);
+}
+
+.nav-list__link {
+    position: relative;
+}
+
+.nav-list__link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.nav-list__link:hover::after {
+    width: 100%;
+}
+
+.logo {
+    animation: slideIn 0.8s ease-out;
+}
+
+.social__item {
+    transition: transform 0.3s ease;
+}
+
+.social__item:hover {
+    transform: translateY(-3px);
+}
+
+.dark-mode-btn {
+    transition: transform 0.3s ease;
+}
+
+.dark-mode-btn:hover {
+    transform: scale(1.1);
+}
+
+.content-list__item {
+    animation: fadeIn 0.8s ease-out;
+    animation-fill-mode: backwards;
+}
+
+.content-list__item:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.content-list__item:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.content-list__item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Keep all your existing CSS below */
+:root {
+    --blackpure: #000;
+    --black: #171718;
+    --black-border: #26292D;
+    --white: #fff;
+    --purple: #5C62EC;
+
+    --text-color: var(--black);
+
+    --dark-bg: var(--black);
+    --dark-border: var(--black-border);
+    --header-text: var(--white);
+    --accent: var(--purple);
+
+    --page-bg: var(--white);
+    --text-color: var(--black);
+
+    --title-1: var(--accent);
+
+    --project-card-bg: var(--white);
+    --project-card-text: var(--black);
+    --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Include all your remaining original CSS here */
+/* ... rest of your existing CSS ... */

@@ -1,0 +1,13 @@
+{
+  "name": "mave-portfolio",
+  "version": "1.0.0",
+  "description": "Mave's Portfolio Website",
+  "main": "main.js",
+  "scripts": {
+    "start": "serve .",
+    "dev": "serve ."
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}
