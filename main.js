@@ -80,7 +80,7 @@ audioPlayer.play().catch(error => {
 // Fetch GitHub projects
 async function fetchGitHubProjects() {
     try {
-        const response = await fetch('https://api.github.com/users/Mave-full/repos');
+        const response = await fetch('https://api.github.com/users/Kotovgame/repos');
         const repos = await response.json();
         
         const projectsContainer = document.querySelector('.projects');
